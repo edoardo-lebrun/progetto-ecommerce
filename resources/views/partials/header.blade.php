@@ -3,13 +3,12 @@
     <div id="top-header">
         <div class="container">
             <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+                <li><i class="fa fa-phone"></i> 0881/833745</li>
+                <li><i class="fa fa-envelope-o"></i> sitoecommerce@email.com/li>
+                <li><i class="fa fa-map-marker"></i> 88 Via Sito E-commerce</li>
             </ul>
             <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+                <li><a href="{{ url('area_riservata')}}"><i class="fa fa-user-o"></i> Il mio Account</a></li>
             </ul>
         </div>
     </div>
@@ -36,12 +35,14 @@
                     <div class="header-search">
                         <form>
                             <select class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
+                                <option value="0">Tutte le categorie</option>
+                                <option value="1">Computer</option>
+                                <option value="2">Accessori</option>
+                                <option value="3">Videocamere</option>
+                                <option value="4">Smartphone e Tablet</option>
                             </select>
-                            <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
+                            <input class="input" placeholder="Cerca">
+                            <button class="search-btn">Cerca</button>
                         </form>
                     </div>
                 </div>
@@ -50,22 +51,13 @@
                 <!-- ACCOUNT -->
                 <div class="col-md-3 clearfix">
                     <div class="header-ctn">
-                        <!-- Wishlist -->
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-heart-o"></i>
-                                <span>Your Wishlist</span>
-                                <div class="qty">2</div>
-                            </a>
-                        </div>
-                        <!-- /Wishlist -->
 
                         <!-- Cart -->
                         <div class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span>Your Cart</span>
-                                <div class="qty">3</div>
+                                <span>Il tuo carrello</span>
+                                <div class="qty">{{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</div>
                             </a>
                             <div class="cart-dropdown">
                                 <div class="cart-list">
@@ -85,18 +77,18 @@
                                             <img src="/img/product02.png" alt="">
                                         </div>
                                         <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+                                            <h3 class="product-name"><a href="#"></a></h3>
+                                            <h4 class="product-price"><span class="qty"></span></h4>
                                         </div>
                                         <button class="delete"><i class="fa fa-close"></i></button>
                                     </div>
                                 </div>
                                 <div class="cart-summary">
-                                    <small>3 Item(s) selected</small>
-                                    <h5>SUBTOTAL: $2940.00</h5>
+                                    <small>Totale Articoli: {{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</small>
+                                    <h5>TOTALE: € {{ Session::has('cart') ? Session::get('cart')->totalPrice : '0.00' }}</h5>
                                 </div>
                                 <div class="cart-btns">
-                                    <a href="#">View Cart</a>
+                                    <a href="{{ route('product.shoppingCart') }}">View Cart</a>
                                     <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>

@@ -10,10 +10,11 @@ class Product extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name', 'price', 'units', 'description', 'image'
+        'name', 'units', 'description', 'image'
     ];
 
-    public function orders(){
+    public function order()
+    {
         return $this->hasMany(Order::class);
     }
 }

@@ -48,12 +48,18 @@
         <div id="responsive-nav">
             <!-- NAV -->
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Hot Deals</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Ultimi arrivi</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">About Us</a></li>
+                <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                <li class="dropdown"><a hre="#" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">Categorie</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="{{ Request::is('computer') ? 'active' : '' }} dropdown"><a href="{{ url('computer') }}">Computer</a></li>
+                        <li class="{{ Request::is('accessori') ? 'active' : '' }} dropdown"><a href="{{ url('accessori') }}">Accessori</a></li>
+                        <li class="{{ Request::is('video') ? 'active' : '' }} dropdown"><a href="{{ url('video') }}">Videocamere</a></li>
+                        <li class="{{ Request::is('smart') ? 'active' : '' }} dropdown"><a href="{{ url('smart') }}">Smartphone e Tablet</a></li>
+                    </ul>
+                </li>
+                <li class="{{ Request::is('lastprod') ? 'active' : '' }}"><a href="{{ url('lastprod') }}">Ultimi arrivi</a></li>
+                <li class="{{ Request::is('help') ? 'active' : '' }}"><a href="{{ url('help') }}">Aiuto</a></li>
+                <li class="{{ Request::is('about-us') ? 'active' : '' }}"><a href="{{ url('about-us') }}">Chi siamo</a></li>
             </ul>
             <!-- /NAV -->
         </div>

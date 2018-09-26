@@ -420,6 +420,7 @@ textarea.input {
   display: inline-block;
   margin-right: 15px;
   font-size: 12px;
+  color: #FFF
 }
 
 .header-links li:last-child {
@@ -652,6 +653,14 @@ textarea.input {
   transition: 0.2s all;
 }
 
+.main-nav>ul.dropdown-menu:hover {
+  display: block;
+  color: #D10024;
+  background-color: transparent;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
 .main-nav>li>a:hover:after, .main-nav>li>a:focus:after, .main-nav>li.active>a:after {
   width: 100%;
 }
@@ -772,7 +781,7 @@ textarea.input {
   z-index: 10;
 }
 
-.shop .shop-body h3 {
+.shop .shop-body h3,h4 {
   color: #FFF;
 }
 
@@ -823,7 +832,7 @@ textarea.input {
   transform: translateY(-50%);
 }
 
-.hot-deal .hot-deal-countdown>li>div h3 {
+.hot-deal .hot-deal-countdown>li>div h4 {
   color: #FFF;
   margin-bottom: 0px;
 }
@@ -876,8 +885,8 @@ textarea.input {
 
 .product .product-img .product-label {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
 }
 
 .product .product-img .product-label>span {
@@ -928,6 +937,13 @@ textarea.input {
 .product .product-body .product-price {
   color: #D10024;
   font-size: 18px;
+}
+
+.product .product-body .product-price {
+  color: #D10024;
+  font-size: 18px;
+  top: 50px;
+  right: 20px;
 }
 
 .product .product-body .product-price .product-old-price {
@@ -1082,15 +1098,26 @@ textarea.input {
   position: relative;
 }
 
+.product-widget-slick {
+  position: relative;
+}
+
 .product-widget+.product-widget {
-  margin: 30px 0px;
+  margin: 30px 30px;
 }
 
 .product-widget .product-img {
   position: absolute;
+  left: -50px;
+  top: 0px;
+  width: 100px;
+}
+
+.product-widget .product-img-slick {
+  position: absolute;
   left: 0px;
   top: 0px;
-  width: 60px;
+  width: 20px;
 }
 
 .product-widget .product-img>img {
@@ -1098,7 +1125,7 @@ textarea.input {
 }
 
 .product-widget .product-body {
-  padding-left: 75px;
+  padding-left: 95px;
   min-height: 60px;
 }
 
@@ -1124,9 +1151,17 @@ textarea.input {
 .product-widget .product-body .product-price {
   font-size: 14px;
   color: #D10024;
+  right: 15px;
 }
 
-.product-widget .product-body .product-price .product-old-price {
+.product-widget .product-body .product-price-total {
+  font-size: 14px;
+  color: #D10024;
+  top: -50px;
+  right: 15px;
+}
+
+.product-widget .product-body .product-price .product-old-price .product-price-total {
   font-size: 70%;
   font-weight: 400;
   color: #8D99AE;
@@ -1139,8 +1174,8 @@ textarea.input {
 
 .product-widget .delete {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40px;
+  left: -70px;
   height: 14px;
   width: 14px;
   text-align: center;
@@ -2004,6 +2039,7 @@ textarea.input {
 #footer {
   background: #15161D;
   color: #B9BABC;
+  max-width: 100%;
 }
 
 #bottom-footer {
@@ -2188,3 +2224,19 @@ textarea.input {
     margin-top: 10px;
   }
 }
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+  max-width: 100%;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
+}
+
+.row {max-width: 100%}
