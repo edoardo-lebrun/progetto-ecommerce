@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Set 26, 2018 alle 13:35
+-- Creato il: Set 26, 2018 alle 13:47
 -- Versione del server: 10.1.35-MariaDB
 -- Versione PHP: 7.2.9
 
@@ -127,10 +127,10 @@ INSERT INTO `products` (`id`, `name`, `description`, `units`, `price`, `discount
 (3, 'Smartphone HD 5', 'Smartphone 5\" con schermo HD, 2gb di ram e 16gb memoria interna.', 50, '378.90', '0.00', 0, '/img/product07.png', 'Smart', '2018-09-20 13:00:13', NULL, NULL),
 (4, 'Videocamera 21Z', 'Videocamera con riprese in HD e dimensioni compatte.', 20, '90.00', '0.00', 0, '/img/product09.png', 'Video', '2018-09-24 13:00:13', NULL, NULL),
 (5, 'Portatile', 'Computer Portatile', 24, '99.99', '0.00', 0, '/img/product06.png', 'Computer', '2018-09-26 09:37:43', '2018-09-26 07:37:43', NULL),
-(6, 'Videocamera 2 HD portatile', 'Videocamera portatile', 0, '35.70', '0.00', 0, '', 'Video', '2018-09-19 22:00:00', NULL, NULL),
-(7, 'Tablet 8\" HD', 'Tablet hd.', 0, '129.50', '0.00', 0, '', 'Smart', '2018-09-24 16:35:05', NULL, NULL),
-(8, 'Videocamera 2 HD ', 'Videocamera portatile HD', 24, '55.99', NULL, NULL, '', 'Video', '2018-09-24 16:35:05', NULL, NULL),
-(9, 'Tablet HD 8\"', 'Tablet HD.', 26, '129.50', NULL, NULL, '', 'Smart', '2018-09-26 09:38:36', '2018-09-26 07:38:36', NULL);
+(6, 'Videocamera 2 HD portatile', 'Videocamera portatile', 0, '35.70', '0.00', 0, '/img/product09.png', 'Video', '2018-09-26 11:47:35', NULL, NULL),
+(7, 'Tablet 8\" HD', 'Tablet hd.', 0, '129.50', '0.00', 0, '/img/product04.png', 'Smart', '2018-09-26 11:46:27', NULL, NULL),
+(8, 'Videocamera 2 HD ', 'Videocamera portatile HD', 24, '55.99', NULL, NULL, '/img/product09.png', 'Video', '2018-09-26 11:47:35', NULL, NULL),
+(9, 'Tablet HD 8\"', 'Tablet HD.', 26, '129.50', NULL, NULL, '	\r\n/img/product04.png\r\n', 'Smart', '2018-09-26 11:47:35', '2018-09-26 07:38:36', NULL);
 
 -- --------------------------------------------------------
 
